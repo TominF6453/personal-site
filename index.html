@@ -81,9 +81,10 @@
 
 						<!-- Jali Research -->
 						<article id="Jali">
-							<h2 class="major">About</h2>
+							<h2 class="major">Jali Research</h2>
 							<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-							<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+							<p>At Jali, I wasn't working on any game in particular but rather I implemented engine-side plugins to utilize Jali features without needing to go back and forth with Maya or some other animating software. What Jali did, was take a rigged face with specific bones and blendshapes corresponding to real-life facial structure (sometimes numbering in the thousands of different animated pieces!), a voice recording of a line, and some parameters to denote character attitude and tone to generate an almost perfect lip-sync animation on the rig for that voice line.</p>
+							<p>Originally, this process would be done entirely within Maya, which meant iterating on an animation took substantial time as you had to open the rig, run the software with the new audio, export the model and animation, and re-import it into the engine. For both Unity and Unreal, I developed plugins that used the native animations suites in both engines along with the Jali backend to directly generate and save the animation within the engine, reducing workflow tedium by a substantial amount. Unity had a custom inspector window which would take in references for the rig and voice, adjust parameters for tone, and generate an animation clip for the rig. Unreal used a custom editor window with the same references, that then generated the 1000+ UAnimFloat curves that drove each bone, then saving into a UAnimSequence that could be played on the model.</p>
 						</article>
 
 						<!-- Contact -->
