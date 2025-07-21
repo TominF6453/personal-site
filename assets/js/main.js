@@ -174,6 +174,9 @@
 									$main.show();
 									$article.show();
 
+								// Change bg image
+									document.getElementById("bg").style.setProperty('--bg_image', `url("../../images/${id}_title.jpg")`);
+
 								// Activate article.
 									setTimeout(function() {
 
@@ -254,7 +257,10 @@
 					$article.removeClass('active');
 
 				// Hide article.
-					setTimeout(function() {
+					setTimeout(function () {
+
+						// Change bg image
+							document.getElementById("bg").style.setProperty('--bg_image', `url("../../images/bg.jpg")`);
 
 						// Hide article, main.
 							$article.hide();
