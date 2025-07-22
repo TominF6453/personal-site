@@ -14,6 +14,8 @@
 		$main = $('#main'),
 		$main_articles = $main.children('article');
 
+	var savedScrollPos = 0;
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -73,6 +75,9 @@
 			$main._show = function(id, initial) {
 
 				var $article = $main_articles.filter('#' + id);
+
+				// Save scroll position.
+				savedScrollPos = $window.scrollTop();
 
 				// No such article? Bail.
 					if ($article.length == 0)
@@ -243,7 +248,7 @@
 
 							// Window stuff.
 								$window
-									.scrollTop(0)
+									.scrollTop(savedScrollPos)
 									.triggerHandler('resize.flexbox-fix');
 
 							return;
@@ -277,7 +282,7 @@
 
 								// Window stuff.
 									$window
-										.scrollTop(0)
+										.scrollTop(savedScrollPos)
 										.triggerHandler('resize.flexbox-fix');
 
 								// Unlock.
