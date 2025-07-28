@@ -1121,12 +1121,22 @@ input, select, textarea {
 
 		transition: all 0.7s linear;
 
-		--bg_image: url("../../images/bg.jpg");
+		--bg_image: url("../../images/games-bg.jpeg");
 	}
+
+	@keyframes movingBG {
+		from { background-position: 0 0 }
+		to { background-position: 1831px 4761px }
+	}
+
+		#bg.is-article-visible {
+			animation: none;
+		}
 
 		#bg:before, #bg:after {
 			content: '';
 			display: block;
+			
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -1144,17 +1154,19 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto, 256px 256px;
+			/*background-position: center, center;*/
+			background-repeat: no-repeat, repeat;
 			z-index: 2;
+
+			
 		}
 
 		#bg:after {
-			-moz-transform: scale(1.125);
-			-webkit-transform: scale(1.125);
-			-ms-transform: scale(1.125);
-			transform: scale(1.125);
+			-moz-transform: scale(1);
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
 			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
@@ -1162,8 +1174,9 @@ input, select, textarea {
 			background-image: var(--bg_image);
 			background-position: center;
 			background-size: cover;
-			background-repeat: no-repeat;
+			background-repeat: repeat;
 			z-index: 1;
+			animation: movingBG 180s linear infinite;
 		}
 
 		body.is-article-visible #bg:after {
@@ -1175,6 +1188,7 @@ input, select, textarea {
 			-webkit-filter: blur(0.2rem);
 			-ms-filter: blur(0.2rem);
 			filter: blur(0.2rem);
+			animation: none;
 		}
 
 		body.is-preload #bg:before {

@@ -265,7 +265,7 @@
 					setTimeout(function () {
 
 						// Change bg image
-							document.getElementById("bg").style.setProperty('--bg_image', `url("../../images/bg.jpg")`);
+							document.getElementById("bg").style.setProperty('--bg_image', `url("../../images/games-bg.jpeg")`);
 
 						// Hide article, main.
 							$article.hide();
