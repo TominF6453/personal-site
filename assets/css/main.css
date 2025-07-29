@@ -1362,6 +1362,19 @@ input, select, textarea {
 			border-radius: 4px;
 		}
 
+		#header a.usebutton {
+			display: block;
+			margin: auto;
+			max-width: 50vh;
+			line-height: 2.75rem;
+			padding: 0 1.25rem 0 1.45rem;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+			font-size: 1.0rem;
+			border: solid 1px #ffffff;
+			border-radius: 4px;
+		}
+
 			#header nav ul li {
 				padding-left: 0;
 				border-left: solid 1px #ffffff;
@@ -1383,11 +1396,15 @@ input, select, textarea {
 					border-bottom: 0;
 				}
 
-					#header nav ul li a:hover {
+					#header nav ul li a:hover,
+					#header a.usebutton:hover
+					{
 						background-color: rgba(255, 255, 255, 0.075);
 					}
 
-					#header nav ul li a:active {
+					#header nav ul li a:active,
+					#header a.usebutton:active
+					{
 						background-color: rgba(255, 255, 255, 0.175);
 					}
 
