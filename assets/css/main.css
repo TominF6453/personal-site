@@ -696,9 +696,20 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
+			margin: 2.5rem 0 0 0;
 			margin: 2.5rem 0;
 			width: 100%;
 		}
+
+		.image.subtitled {
+			display: block;
+			margin: 2.5rem 0 0 0;
+			width: 100%;
+		}
+
+			.image.subtitled img {
+				width: 100%;
+			}
 
 			.image.main img {
 				width: 100%;
@@ -1582,6 +1593,15 @@ input, select, textarea {
 			border-radius: 4px;
 			opacity: 0;
 		}
+
+			#main .subtitle {
+				padding: 0 0 1.5rem 0;
+				text-align: center;
+				letter-spacing: normal;
+				font-size: 0.6rem;
+				opacity: 0.7;
+				margin-bottom: 0;
+			}
 
 			#main article.active {
 				-moz-transform: translateY(0);
