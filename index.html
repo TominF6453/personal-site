@@ -74,6 +74,20 @@
 							<a href="https://www.meta.com/experiences/4468078983226058/"><span class="image main"><img src="images/hrdvr_meta.jpg" alt="" /></span></a>
 						</article>
 
+						<!-- Delvers -->
+						<article id="delvers">
+							<h2 class="major">Delvers</h2>
+							<span class="image main"><img src="images/delvers_friends.png" alt="" /></span>
+							<p>Delvers was the last project I worked on with LGG. The concept was a mix of horror and action, where you and three friends would drill deep into the earth to mine valuable gems to bring back to the surface. It was a desktop release using HDRP, so the amount of detail was relaxed from our usual VR titles and I got plenty of opportunity to explore VFX particle systems and shaders that were more intensive. I initially worked on character movement and control, smoothing out character/camera movement and refactoring the main gem carry mechanic to be infinitely less annoying.</p>
+							<span class="image main"><img src="images/delvers_lavacastle.png" alt="" /></span>
+							<p>After fixing the character controller, I concentrated on player tools, scene flow design, and multiplayer fixes. My favourite tool I've implemented has to be the handcannon, which was a massive handheld cannonball launcher which could destroy terrain and split into shrapnel doing tons of damage. The original set of tools was just a pickaxe, torch and compass, and I added javelin beacons, a plank hammer for building, dynamite, grapple gun and the handcannon. I also prototyped some power network tools which would allow you to build a network of pylons to transfer power from anomalies in the caves, but that unfortunately didn't get past the prototype stage.</p>
+							<video width="750" height="400" controls>
+								<source src="images/delvers_handcannon.webm" type="video/webm">
+								Your browser does not support the video tag.
+							</video>
+							<p>Scene flow and multiplayer was a much bigger beast. We were using Steam + Mirror for our networking solution but the initial implementation of Mirror was exceptionally rigid and didn't correctly follow Mirror design philosophy. Scene flow was equally disastrous because of this setup, where we only allowed players to join right at the beginning with lobby creation, as any other time would cause almost everything to desync and be unplayable. A casual friends game should support drop-in, and that required a rework of almost every variable or object that was networked. With this rework however, we no longer needed a lobby as players could host from in-game. With some asynchronous loading and terrain detail tweaks, I removed pretty much every loading screen from the game such that once you join a lobby, the game never loads again.</p>
+							<span class="image main"><img src="images/delvers_gems.png" alt="" /></span>
+						</article>
 						<!-- The Last Sky -->
 						<article id="tls">
 							<h2 class="major">The Last Sky</h2>
