@@ -88,6 +88,24 @@
 							<p>Scene flow and multiplayer was a much bigger beast. We were using Steam + Mirror for our networking solution but the initial implementation of Mirror was exceptionally rigid and didn't correctly follow Mirror design philosophy. Scene flow was equally disastrous because of this setup, where we only allowed players to join right at the beginning with lobby creation, as any other time would cause almost everything to desync and be unplayable. A casual friends game should support drop-in, and that required a rework of almost every variable or object that was networked. With this rework however, we no longer needed a lobby as players could host from in-game. With some asynchronous loading and terrain detail tweaks, I removed pretty much every loading screen from the game such that once you join a lobby, the game never loads again.</p>
 							<span class="image main"><img src="images/delvers_gems.png" alt="" /></span>
 						</article>
+
+						<!-- TMNT -->
+						<article id="tmnt">
+							<h2 class="major">TMNT: Empire City</h2>
+							<span class="image main"><img src="images/tmnt_city.png" alt="" /></span>
+							<p>TMNT was actually part of a contract with Cortopia to take their vertical slice prototype and turn it into an open-world prototype with a bigger emphasis on exploration and traversal. This was a small and short project only taking 3 months, where I was leading a team of 4 developers as lead programmer and designer. I had a ton of fun with this project as it explicitly stated that standard VR user comfort (snap translation, vignetting, etc..) could be thrown away in favour of pure mechanics. It was a chance to explore more interactive movement within virtual reality to make an engaging open-world with a fun traversal system to navigate it.</p>
+							<span class="image main"><img src="images/tmnt_climb.gif" alt="" /></span>
+							<p>A lot of design decisions essentially came down to "if I was a legendary ninja, how would I get from here to there?". It was pretty clear to me that we had to expand the parkour options and the grapple hook uses to really bring that ninja traversal to life. Baseline, anything you could do in Dying Light needed to be possible in TMNT. When the project started, you could smooth locomote and grapple hook to specific points only. By the end, grapple hooks could now attach to a range of objects and rooftops, or if kept in hand, ride ziplines. Movement was expanded to include jumping, climbing, mantling (comfortably), launch pads and dashing. Combo moves were also added, for example jumping immediately after grappling to somewhere gave you extra height and momentum.</p>
+							<p>I had a ton of fun implementing all the new movement, it felt like an ever-expanding toolbox of traversal. I was also responsible for recording and editing the gameplay showcases for the milestones, so it was especially satisfying to be able to regularly show off all the new techniques I'd implemented. The gifs above and below are both snippets of my own gameplay.</p>
+							<span class="image main"><img src="images/tmnt_grapple.gif" alt="" /></span>
+							<p>We did have some turbulence with the level design. We originally planned to incorporate NYC accurately at scale, since being in VR made putting the city into perspective an attractive concept. We even grabbed a detailed city heightmap scan that I converted to be transferable to Unity as one mesh. The problem is that real cities are surprisingly empty when you remove the limitations of human movement and traversal became a tedious exercise in grappling between buildings. So by the end, we hand crafted a more dense city with many more obstacles and climbables which added variety to traversal and, in my opinion, made movement much more enjoyable than before. This new city is the one present in the images here.</p>
+							<span class="image main"><img src="images/tmnt_pose.jpg" alt="" /></span>
+
+							<p>Get TMNT:Empire City on Steam or Meta Quest below!</p>
+							<iframe src="https://store.steampowered.com/widget/3713650/" frameborder="0" width="646" height="190"></iframe>
+							<a href="https://www.meta.com/experiences/teenage-mutant-ninja-turtles-empire-city/6635073589916590/"><span class="image main"><img src="images/tmnt_meta.jpg" alt=""/></span></a>
+						</article>
+
 						<!-- The Last Sky -->
 						<article id="tls">
 							<h2 class="major">The Last Sky</h2>
